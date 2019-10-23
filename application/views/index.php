@@ -6,17 +6,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>FW Medika | Beranda</title>
 	<?php $this->load->view('Include/link-atas'); ?>
 </head>
+
 <body>
 	<!-- Header -->
 	<!-- //Header -->
 	<!-- Navigation -->
 	<?php $this->load->view('Include/header-navigation'); ?>
 	<!-- //Navigation -->
-	
+
 	<!-- main-slider -->
 	<?php $this->load->view('Include/main-slider'); ?>
 	<!-- //main-slider -->
@@ -33,40 +35,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</ul>-->
 					<div id="myTabContent" class="tab-content">
 						<!--<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">-->
-							<!-- <div class="agile-tp">
+						<!-- <div class="agile-tp">
 								<h5>Advertised this week</h5>
 								<p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
 							</div> -->
 
-							
-							<div class="agile_top_brands_grids">
-								<?php 
-								foreach ($data_barang as $key => $row) {
-									//Tampilkan 6 Barang Teratas Saja, meskipun barang dari database ada > dari 6
-									if($key < 6) { 
-										?>
-										<div class="col-md-4 top_brand_left">
-											<div class="hover14 column">
-												<div class="agile_top_brand_left_grid">
-													<div class="agile_top_brand_left_grid_pos">
-														<img src="<?php echo base_url()."assets/";?>images/offer.png" alt=" " class="img-responsive" />
-													</div>
-													<div class="agile_top_brand_left_grid1">
-														<figure>
-															<div class="snipcart-item block" >
-																<div class="snipcart-thumb">
-																	<a href="<?php echo site_url('Welcome/DetailBarang/'.$row->id);?>"><img height="150" width="100" title=" " alt=" " src="<?php echo base_url()."assets/images/".$row->gambar;?>" /></a>	
-																	<p><?php echo $row->nama_barang;?></p>
-															<!-- <div class="stars">
+
+						<div class="agile_top_brands_grids">
+							<?php
+							foreach ($data_barang as $key => $row) {
+								//Tampilkan 6 Barang Teratas Saja, meskipun barang dari database ada > dari 6
+								if ($key < 6) {
+									?>
+									<div class="col-md-4 top_brand_left">
+										<div class="hover14 column">
+											<div class="agile_top_brand_left_grid">
+												<div class="agile_top_brand_left_grid_pos">
+													<img src="<?php echo base_url() . "assets/"; ?>images/offer.png" alt=" " class="img-responsive" />
+												</div>
+												<div class="agile_top_brand_left_grid1">
+													<figure>
+														<div class="snipcart-item block">
+															<div class="snipcart-thumb">
+																<a href="<?php echo site_url('Welcome/DetailBarang/' . $row->id); ?>"><img height="150" width="100" title=" " alt=" " src="<?php echo base_url() . "assets/images/" . $row->gambar; ?>" /></a>
+																<p><?php echo $row->nama_barang; ?></p>
+																<!-- <div class="stars">
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star gray-star" aria-hidden="true"></i>
 															</div>-->
-															<h4>Rp. <?php echo $row->harga; ?></h4>
-														</div>
-														<!--<div class="snipcart-details top_brand_home_details">
+																<h4>Rp. <?php echo $row->harga; ?></h4>
+															</div>
+															<!--<div class="snipcart-details top_brand_home_details">
 															<form action="#" method="post">
 																<fieldset>
 																	<input type="hidden" name="cmd" value="_cart" />
@@ -82,27 +84,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																</fieldset>
 															</form>
 														</div>-->
-													</div>
-												</figure>
+														</div>
+													</figure>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<?php
-							} else {
-								//Nothing
+							<?php
+								} else {
+									//Nothing
+								}
 							}
-						} 
-						?>
-						<div class="clearfix"> </div>
+							?>
+							<div class="clearfix"> </div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- //top-brands -->
-<!-- Carousel
+	<!-- //top-brands -->
+	<!-- Carousel
 	================================================== -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -113,15 +115,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<a> <img class="first-slide" src="<?php echo base_url()."assets/";?>images/Macam-macam-Obat-Herbal.jpg" alt="First slide"></a>
+				<a> <img class="first-slide" src="<?php echo base_url() . "assets/"; ?>images/Macam-macam-Obat-Herbal.jpg" alt="First slide"></a>
 
 			</div>
 			<div class="item">
-				<a> <img class="second-slide " src="<?php echo base_url()."assets/";?>images/Jamu-Tetes-Soman-Obat-Herbal.jpg" alt="Second slide"></a>
+				<a> <img class="second-slide " src="<?php echo base_url() . "assets/"; ?>images/Jamu-Tetes-Soman-Obat-Herbal.jpg" alt="Second slide"></a>
 
 			</div>
 			<div class="item">
-				<a><img class="third-slide " src="<?php echo base_url()."assets/";?>images/obat-penyebab-kerusakan-ginjal.jpg" alt="Third slide"></a>
+				<a><img class="third-slide " src="<?php echo base_url() . "assets/"; ?>images/obat-penyebab-kerusakan-ginjal.jpg" alt="Third slide"></a>
 
 			</div>
 		</div>
@@ -129,10 +131,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- //new -->
 	<!-- footer -->
-	<?php $this->load->view('Include/footer')?>
+	<?php $this->load->view('Include/footer') ?>
 	<!-- //footer -->
 	<!-- Bootstrap Core JavaScript -->
-	<?php $this->load->view('Include/link-bawah')?>
+	<?php $this->load->view('Include/link-bawah') ?>
 	<!-- //Bootstrap Core JavaScript -->
 </body>
+
 </html>

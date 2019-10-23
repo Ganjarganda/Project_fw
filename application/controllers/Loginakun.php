@@ -42,4 +42,3 @@ class Loginakun extends CI_Controller
 		redirect(base_url());
 	}
 }
-?>

@@ -1,13 +1,14 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	function __construct()
-    {
-        parent::__construct();
-        $this->load->model('Queryeksekusi');
-    }
+	{
+		parent::__construct();
+		$this->load->model('Queryeksekusi');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -24,15 +25,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	
+
 	/*Masih di bagian GUEST---------------------------------------------- */
 	public function index()
 	{
-		$data['data_barang']=$this->Queryeksekusi->tampil_data_barang();
-		$this->load->view('index',$data);
+		$data['data_barang'] = $this->Queryeksekusi->tampil_data_barang();
+		$this->load->view('index', $data);
 	}
 
-	public function DetailBarang($id){
+	public function DetailBarang($id)
+	{
 		$DBarang = $this->Queryeksekusi->tampil_barang_per_id($id);
 		$dataBarang = array(
 			'id' 				=> set_value('id', $DBarang[0]->id),
@@ -42,14 +44,15 @@ class Welcome extends CI_Controller {
 			'stok_barang' 		=> set_value('stok_barang', $DBarang[0]->stok_barang),
 			'gambar' 			=> set_value('gambar', $DBarang[0]->gambar)
 		);
-		$this->load->view('tampil',$dataBarang);
+		$this->load->view('tampil', $dataBarang);
 	}
 
-	function search_keyword() {
-        $nama_barang    	=   $this->input->post('nama_barang');
-        $data['results']    =   $this->Queryeksekusi->search($nama_barang);
-        $this->load->view('hasilPencarian',$data);
-    }
+	function search_keyword()
+	{
+		$nama_barang    	=   $this->input->post('nama_barang');
+		$data['results']    =   $this->Queryeksekusi->search($nama_barang);
+		$this->load->view('hasilPencarian', $data);
+	}
 
 
 	/*Masih di bagian Sudah Login GUEST----------------------------------------------*/
