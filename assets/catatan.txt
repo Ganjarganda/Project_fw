@@ -1,0 +1,3 @@
+folder :
+aset_admin --> css, js dll yang sekarang digunakan
+assetsAdmin --> asset ini masih digunakan untuk dibagian upload, jadi biarkan aja ada(assets ini yang dari bang mahrus)
